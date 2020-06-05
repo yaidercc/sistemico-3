@@ -30,14 +30,12 @@ public class PruebaABBEstudiantes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Estudiante estudiante1 = Persona.generarEstudiante();
-        Estudiante estudiante2 = Persona.generarEstudiante();
         ABBestudiantes abb = new ABBestudiantes();
-        for (int i = 0; i < 4; i++) {
-            System.out.println(estudiante1);
+        Estudiante grupo[] = Persona.generarEstudiante(3);
 
+        for (int i = 0; i < grupo.length; i++) {
+            abb.agregar(grupo[i]);
         }
-
         System.out.println(abb);
 
         //compara letras del alfabeto
