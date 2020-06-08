@@ -154,6 +154,12 @@ public class ABBestudiantes {
                     return MayorNotaMujeres(r.HijoIzquierdo, mayor);
                 }
             }
+        } else {
+            if (r.HijoIzquierdo != null) {
+                return MayorNotaMujeres(r.HijoIzquierdo, mayor);
+            } else if (r.HijoDerecho != null) {
+                return MayorNotaMujeres(r.HijoDerecho, mayor);
+            } 
         }
 
         return mayor;
