@@ -110,4 +110,30 @@ public class ABBestudiantes {
         return mayor;
 
     }
+
+    public double MenorNota() {
+        return MenorNota(raiz, raiz.estudiante.getNota());
+    }
+
+    private double MenorNota(NodoBinario r, double Menor) {
+        if (r.estudiante.getNota() < Menor) {
+            Menor = r.estudiante.getNota();
+            if (r.HijoIzquierdo != null) {
+                return MenorNota(r.HijoIzquierdo, Menor);
+            } else if (r.HijoDerecho != null) {
+                return MenorNota(r.HijoDerecho, Menor);
+            }
+        } else {
+            if (r.HijoDerecho != null) {
+                return MenorNota(r.HijoDerecho, Menor);
+            } else if (r.HijoIzquierdo != null) {
+                return MenorNota(r.HijoIzquierdo, Menor);
+            }
+
+        }
+        return Menor;
+    }
+
+   
+
 }

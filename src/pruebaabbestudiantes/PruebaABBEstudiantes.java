@@ -35,13 +35,21 @@ public class PruebaABBEstudiantes {
 
         for (int i = 0; i < grupo.length; i++) {
             abb.agregar(grupo[i]);
+            if (grupo[i].esMujer()) {
+                System.out.println("si");
+
+            } else {
+                System.out.println("no");
+
+            }
         }
-        System.out.println("PROMEDIO: "+abb.NotaPromedio());
+        System.out.println("PROMEDIO: " + abb.NotaPromedio());
         System.out.println(abb);
-        
-        System.out.println("mayor: "+abb.MayorNota());
-      
-        
+
+        System.out.println("mayor en general: " + abb.MayorNota());
+        System.out.println("menor en general: " + abb.MenorNota());
+        System.out.println("menor mujeres: " + abb.MayorNotaMujeres());
+
         //compara letras del alfabeto
         /*String cadena = "1";
         String cadena1 = "2";
