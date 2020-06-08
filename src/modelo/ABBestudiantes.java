@@ -134,6 +134,29 @@ public class ABBestudiantes {
         return Menor;
     }
 
-   
+    public double MayorNotaMujeres() {
+        return MayorNotaMujeres(raiz, 0);
+    }
+
+    private double MayorNotaMujeres(NodoBinario r, double mayor) {
+        if (r != null && r.estudiante.esMujer()) {
+            if (r.estudiante.getNota() > mayor) {
+                mayor = r.estudiante.getNota();
+                if (r.HijoIzquierdo != null) {
+                    return MayorNotaMujeres(r.HijoIzquierdo, mayor);
+                } else if (r.HijoDerecho != null) {
+                    return MayorNotaMujeres(r.HijoDerecho, mayor);
+                }
+            } else {
+                if (r.HijoDerecho != null) {
+                    return MayorNotaMujeres(r.HijoDerecho, mayor);
+                } else if (r.HijoIzquierdo != null) {
+                    return MayorNotaMujeres(r.HijoIzquierdo, mayor);
+                }
+            }
+        }
+
+        return mayor;
+    }
 
 }
