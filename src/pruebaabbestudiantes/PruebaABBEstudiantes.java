@@ -36,11 +36,15 @@ public class PruebaABBEstudiantes {
         for (int i = 0; i < grupo.length; i++) {
             abb.agregar(grupo[i]);
         }
+        System.out.println("PROMEDIO: "+abb.NotaPromedio());
         System.out.println(abb);
-
+        
+        System.out.println("mayor: "+abb.MayorNota());
+      
+        
         //compara letras del alfabeto
-        String cadena = "a";
-        String cadena1 = "b";
+        /*String cadena = "1";
+        String cadena1 = "2";
 
         if (cadena.compareTo(cadena1) < 0) {
             System.out.println("Mayor");
@@ -48,6 +52,6 @@ public class PruebaABBEstudiantes {
             System.out.println("Menor");
         } else {
             System.out.println("Iguales");
-        }
+        }*/
     }
 }
